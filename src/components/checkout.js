@@ -2,13 +2,12 @@ import React from "react";
 
 const CheckOut = () => {
    function handleSubmit() {
-    alert("You have adopted birds. Thank you")
+    alert("Purchase Confirmed. You have adopted birds. Thank you!")
    } 
-
 
     return (
         <div className="checkOut">
-            <form>
+            <form onSubmit={handleSubmit}>
                 <h2>Checkout</h2>
                 <label htmlFor="">First Name</label>
                 <input type="text" />
@@ -18,7 +17,7 @@ const CheckOut = () => {
                 <input type="text" />
                 <label htmlFor="">Zip Code</label>
                 <input type="number" />
-                <button onClick={handleSubmit}>Submit</button>
+                <button >Submit</button>
             </form>
         </div>
     )

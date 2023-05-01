@@ -3,9 +3,7 @@ import React from "react";
 
 
 const Bird = ({ name, price, image, handleAdoptBtn, id }) => {
-
     return (
-
         <div className="card" >
             <h5>{name}</h5>
             <p>Price ${price}</p>
@@ -13,7 +11,6 @@ const Bird = ({ name, price, image, handleAdoptBtn, id }) => {
             <br />
             <button onClick={() => handleAdoptBtn(id)}>Adopt</button>
         </div>
-
     )
 }
 

@@ -18,11 +18,13 @@ function App() {
         const newTotal = total + el.amount
         setAddOn([...addOn, el])
         setTotal(newTotal)
-        if (addOn.length >= 2) {
+        if (addOn.length === 2) {
           setDiscount(10)
           setTotal(newTotal - (newTotal * .1))
+          
         }
       }
+      return true  // to fix the console warning that says filter fn needs return.
     })
   }
 
@@ -30,7 +32,8 @@ function App() {
   return (
     <div className="container">
       {birdData.map(data =>
-        <Bird key={data.id}
+        <Bird 
+          key={data.id}
           id={data.id}
           name={data.name}
           price={data.amount}
